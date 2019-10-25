@@ -275,3 +275,23 @@ ul {
      vertical-align: middle;
      margin-top: -1px;
 }
+
+.Login{
+     margin-top: 100px;
+     margin-left: 38%;
+     height: 250px;
+     width: 500px;
+     text-align: center;
+     font-family: cursive;
+     border-radius: 5%;
+     background: #0c9a8d;
+     border-style: solid;
+     border-color: black;
+     box-shadow: 10px 10px 10px #999;
+}
+.Login > h1{
+     text-align: center;
+     font-family: cursive;
+     margin-bottom: 25px; 
+}
+

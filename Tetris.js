@@ -1,3 +1,5 @@
+
+
 var NCOL= prompt ("Digite a largura do tabuleiro");//Quantidade de colunas da matriL base
 var NROW= prompt ("Digite a altura do tabuleiro");//Quantidade de linhas da matriL base
 
@@ -31,9 +33,16 @@ var up = new Audio('audios/smb_1-up (online-audio-converter.com).mp3');
 var levelUp = new Audio ('audios/smb_warning (online-audio-converter.com).mp3');
 var continueMusic = new Audio('audios/y2mate.com - sonic_the_hedgehog_ost_green_hill_zone_G-i8HYi1QH0.mp3');
 var activeInstruction = false;
+var activeJogo = false;
+
 
 //Final
 document.getElementById("button2").disabled = true;
+
+//variaveis do hold piece
+var holdedPiece;
+var checkHolded=false;
+
 
 //variaveis do hold piece
 var holdedPiece;
@@ -577,6 +586,26 @@ function printData(){
     return false;
 } 
 
+function printData(){
+    continueMusic.pause();
+    gameOver.play();
+    continueMusic.currentTime = 0;
+    players.push (new Pessoa());//Adicionando Pessoas ao array Jogadores
+    //Funcao para ordenar o Vetor de jogadores a partir da maior pontução
+    players.sort((a, b) => (a.points < b.points) ? 1 : -1)
+    document.getElementById("dados").innerHTML = ""; //Limpa o campo dados antes de imprimir a lista 
+    //Item Percorre a quantidade de jogadores imprimindo no html
+    players.forEach(item => {
+    document.getElementById("dados").innerHTML +=
+    '<li><b>Name: </b>'+item.name +
+    '<b> points: </b>'+item.points+
+    '<br><b> level: </b>'+item.level +
+    '<b> Time: </b>'+item.time+
+    '</li>';//Adicionar ponto aqu
+});
+    return false;
+} 
+
 function pauseGame(){
     if(paused == 1){
         paused = 0;
@@ -614,3 +643,6 @@ function instructWindow(){
         }
     }
 }
+
+
+
