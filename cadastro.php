@@ -33,11 +33,17 @@ if (count($_POST) > 0 ){
 <body>
 
 
-<div class = "cadastro">
+<header>
+      
+      <div id="logo">
+   <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
+   <h1> Cadastro do Jogador </h1>
+      </div>
+  
 
-  <header>
-       <h1> Cadastro do Jogador </h1>
-  </header>
+</header>
+
+<div class = "Cadastro">
 
 
 

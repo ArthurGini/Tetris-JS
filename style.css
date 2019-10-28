@@ -296,3 +296,16 @@ ul {
      margin-bottom: 25px; 
 }
 
+.Cadastro{
+     margin-top: 80px;
+     margin-left: 38%;
+     height: 420px;
+     width: 500px;
+     text-align: center;
+     font-family: cursive;
+     border-radius: 5%;
+     background: #0c9a8d;
+     border-style: solid;
+     border-color: black;
+     box-shadow: 10px 10px 10px #999;
+}
