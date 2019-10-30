@@ -18,7 +18,6 @@ if (count($_POST) > 0 ){
   
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +31,6 @@ if (count($_POST) > 0 ){
 
 <body>
 
-
 <header>
       
       <div id="logo">
@@ -44,7 +42,6 @@ if (count($_POST) > 0 ){
 </header>
 
 <div class = "Cadastro">
-
 
 
 <form  method="POST" action = "login.php"  >
@@ -69,9 +66,10 @@ if (count($_POST) > 0 ){
 
 
       <input type="submit" value="Cadastrar" name="submit"/>
-    </form>
+  </form>
 </div>
     
 </body>
 
 </html>
+ 
