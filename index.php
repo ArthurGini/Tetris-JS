@@ -96,6 +96,7 @@
             </div>
             <button id="button4" onclick="instructWindow()">Ok</button>
         </div>
+      
     </section>
     <script src="Tetris.js"></script>
     

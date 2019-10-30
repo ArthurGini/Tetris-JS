@@ -59,12 +59,9 @@ if (count($_POST) > 0 ){
 </head>
 
 <body>
+ 
 
-
-
-
-
- <header>
+  <header>
       
         <div id="logo">
      <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">

@@ -18,7 +18,6 @@ if (count($_POST) > 0 ){
   
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -32,13 +31,17 @@ if (count($_POST) > 0 ){
 
 <body>
 
+<header>
+      
+      <div id="logo">
+   <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
+   <h1> Cadastro do Jogador </h1>
+      </div>
+  
 
-<div class = "cadastro">
+</header>
 
-  <header>
-       <h1> Cadastro do Jogador </h1>
-  </header>
-
+<div class = "Cadastro">
 
 
 <form  method="POST" action = "login.php"  >
@@ -63,9 +66,10 @@ if (count($_POST) > 0 ){
 
 
       <input type="submit" value="Cadastrar" name="submit"/>
-    </form>
+  </form>
 </div>
     
 </body>
 
 </html>
+ 
