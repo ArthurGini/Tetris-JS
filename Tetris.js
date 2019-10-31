@@ -1,3 +1,5 @@
+
+
 var NCOL= prompt ("Digite a largura do tabuleiro");//Quantidade de colunas da matriL base
 var NROW= prompt ("Digite a altura do tabuleiro");//Quantidade de linhas da matriL base
 
@@ -31,6 +33,8 @@ var up = new Audio('audios/smb_1-up (online-audio-converter.com).mp3');
 var levelUp = new Audio ('audios/smb_warning (online-audio-converter.com).mp3');
 var continueMusic = new Audio('audios/y2mate.com - sonic_the_hedgehog_ost_green_hill_zone_G-i8HYi1QH0.mp3');
 var activeInstruction = false;
+var activeJogo = false;
+
 
 //Final
 document.getElementById("button2").disabled = true;
@@ -639,3 +643,20 @@ function instructWindow(){
         }
     }
 }
+
+function Jogar(){
+    if(activeJogo == false){
+        document.getElementById("index.php").style.display = "block";
+        document.getElementById("button").disabled = true;
+        document.getElementById("button").style.cursor = "not-allowed";
+        activeJogo = true;
+
+    }     else{
+        document.getElementById("index.php").style.display = "none";
+        document.getElementById("button").disabled = false;
+        document.getElementById("button").style.cursor = "pointer";
+        activeJogo = false;
+    }
+}
+
+

@@ -11,15 +11,10 @@
 </head>
 
 <body>
-    <div id="login" style="width:100px;float:left;">
-    		
-        <p><a href="./cadastro.php">Cadastrar</a></p>
-        <p><a href="./login.php">Login</a></p>    	
-        
-        </div>
 
-     
-   
+
+    
+
     <header>
         <div id="logo">
             <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
@@ -101,6 +96,7 @@
             </div>
             <button id="button4" onclick="instructWindow()">Ok</button>
         </div>
+      
     </section>
     <script src="Tetris.js"></script>
     
