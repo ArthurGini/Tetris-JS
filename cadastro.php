@@ -1,24 +1,4 @@
 
-<?php
-
-session_start();
-
-//CADASTRAR JOGADOR
-include_once("conexao.php");
-
-if (count($_POST) > 0 ){
-
-    $name =  $_POST["name"];
-    $datanasc = $_POST["datanasc"];
-    $cpf =$_POST["cpf"];  
-    $telefone = $_POST["tel"];       
-    $email = $_POST["e-mail"];
-    $username = $_POST["username"];
-    $senha = $_POST["senha"];
-  
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,45 +11,77 @@ if (count($_POST) > 0 ){
 
 <body>
 
-<header>
-      
-      <div id="logo">
+
+
+
+  <header>
+  <div id="logo">
    <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
    <h1> Cadastro do Jogador </h1>
       </div>
   
+  </header>
 
-</header>
+  <div class = "Cadastro">
+<?php
 
-<div class = "Cadastro">
+$form = "
+<form action = 'Login.php'  method='POST'> 
 
 
-<form  method="POST" action = "login.php"  >
 
-    <b> Dados para Cadastro </b> <br>
+      <p> Nome Completo: <input type = 'text' name = 'nome' /> </p>
 
-      <p> Nome Completo: <input type = "text" name = "name" required="required" /> </p>
+      <p> Data de Nascimento: <input type = 'text' name = 'datanasc'   /> </p>
 
-      <p> Data de Nascimento: <input type = "text" name = "datanasc" required="required"  /> </p>
+      <p> CPF: <input type = 'text' name = 'cpf'/> </p>
 
-      <p> CPF: <input type = "text" name = "cpf" required="required"/> </p>
+      <p> Telefone: <input type = 'text' name = 'tel' /> </p>
 
-      <p> Telefone: <input type = "text" name = "tel" required="required"/> </p>
+      <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
 
-      <p> E-mail: <input type ="text" name = "e-mail" required="required" /> </p>
+ 
 
-      <b> Dados para Login </b> <br>
-
-      <p> Username Novo: <input type ="text" name = "username" required="required" /> </p>
+      <p> Username Novo: <input type ='text' name = 'username' /> </p>
       
-      <p> Senha Nova: <input type ="text" name = "senha"required="required"  /> </p>
+      <p> Senha Nova: <input type ='text' name = 'senha' /> </p>
+            <input type='submit' value='Cadastrar' name='submit'/>
+    </form>";
+
+if (isset($_POST["nome"]))
+        {
+          try
+          {
+            $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+              
+            $sql = "INSERT INTO dados VALUES (
+                          '" . $_POST['nome'] . "',
+                          " . $_POST['datanasc'] . ", 
+                          '" .$_POST['cpf'] . "', 
+                          '" .$_POST['tel'] . "', 
+                          '" . $_POST['e-mail'] . "',
+                          '" . $_POST['username'] . "',
+                          '" . $_POST['senha'] . "')";
+
+            $conn->exec($sql);
+
+            echo $form;
+          }
+          catch(PDOException $e)
+          {
+            echo "Ocorreu um erro: " . $e->getMessage();
+          } 
+        }
+        else
+        {   
+          echo $form;
+        }
+      ?>
 
 
-      <input type="submit" value="Cadastrar" name="submit"/>
-  </form>
 </div>
     
 </body>
 
 </html>
- 
