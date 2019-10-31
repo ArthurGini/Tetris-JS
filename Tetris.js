@@ -644,19 +644,5 @@ function instructWindow(){
     }
 }
 
-function Jogar(){
-    if(activeJogo == false){
-        document.getElementById("index.php").style.display = "block";
-        document.getElementById("button").disabled = true;
-        document.getElementById("button").style.cursor = "not-allowed";
-        activeJogo = true;
-
-    }     else{
-        document.getElementById("index.php").style.display = "none";
-        document.getElementById("button").disabled = false;
-        document.getElementById("button").style.cursor = "pointer";
-        activeJogo = false;
-    }
-}
 
 

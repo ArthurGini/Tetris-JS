@@ -30,6 +30,7 @@
         <button id="button" onclick="pauseGame()">Pause game</button>
         <button id="button2" onclick="startGame()">Restart game</button>
         <button id="button3" onclick="instructWindow()">Instructions</button>
+        <button id="desconectar" onclick=""
         <canvas id="Matriz"></canvas>
         <div id="next">
             <div class="title">
