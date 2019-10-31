@@ -87,7 +87,7 @@ if (isset($_SESSION['mensagem'])) {
 <div class="Login">
     <form  method="POST" action = "index.php" > 
      <p> Username: <input type = "text" name = "username"  /> </p>
-        <p>  Senha: <input type = "text" name = "senha"  /> </p>
+        <p>  Senha: <input type = "password" name = "senha"  /> </p>
         <input type="submit" value="Fazer Login" name="submit"/>
         
 
