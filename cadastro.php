@@ -32,9 +32,9 @@ $form = "
 
       <p> Nome Completo: <input type = 'text' name = 'nome' /> </p>
 
-      <p> Data de Nascimento: <input type = 'text' name = 'datanasc'   /> </p>
+      <p> Data de Nascimento: <input type = 'text' name = 'datanasc' disabled /> </p>
 
-      <p> CPF: <input type = 'text' name = 'cpf'/> </p>
+      <p> CPF: <input type = 'text' name = 'cpf' disabled/> </p>
 
       <p> Telefone: <input type = 'text' name = 'tel' /> </p>
 
@@ -42,7 +42,7 @@ $form = "
 
  
 
-      <p> Username Novo: <input type ='text' name = 'username' /> </p>
+      <p> Username Novo: <input  type ='text' name = 'username' disabled /> </p>
       
       <p> Senha Nova: <input type ='text' name = 'senha' /> </p>
             <input type='submit' value='Cadastrar' name='submit'/>
