@@ -42,7 +42,7 @@ if (isset($_POST["username"])){
             if($stmt->execute()){
                 if($stmt->rowcount() == 1){
                     session_start();
-                    $SESSION['username'] = $username;
+                    $_SESSION['username'] = $username;
                     header("Location: index.html");  
                 }
                 else {  
