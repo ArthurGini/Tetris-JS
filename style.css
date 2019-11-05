@@ -237,6 +237,32 @@ ul {
      box-shadow: 0 5px #999;
      transform: translateY(4px);
 }
+/*Hitorico de partidas */
+#button5 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 230px;
+     position: absolute;
+     margin-left: 8%;
+}
+   
+#button5:hover {
+     background-color: #4A708B;
+}
+   
+#button5:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
 
 #instructions{
      height: 400px;
@@ -307,4 +333,18 @@ ul {
      border-style: solid;
      border-color: black;
      box-shadow: 10px 10px 10px #999;
+}
+/*Historico de partidas */
+#historico{
+     transform: translate(-50%, -50%);
+     top: 50%;
+     left: 50%;
+     height:auto;
+     width: 500px;
+     background: #eeeeee;
+     position: absolute;
+     text-align: center;
+     box-shadow: 15px 15px 10px #458B74;
+     overflow-y: auto;
+
 }

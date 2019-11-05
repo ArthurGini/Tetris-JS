@@ -18,6 +18,9 @@
         <button id="button" onclick="pauseGame()">Pause game</button>
         <button id="button2" onclick="startGame()">Restart game</button>
         <button id="button3" onclick="instructWindow()">Instructions</button>
+
+        <a href="historico.php"><button id="button5" onclick="historico.php">Historico de Partidas</button></a>
+
         <canvas id="Matriz"></canvas>
         <div id="next">
             <div class="title">
