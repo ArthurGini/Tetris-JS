@@ -592,8 +592,6 @@ var send = function(name, points, level, time) {
     var url = "http://localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-    alert("Nome gravado com sucesso!");
-
 };
 
 function pauseGame(){

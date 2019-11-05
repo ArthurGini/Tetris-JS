@@ -14,9 +14,18 @@
             $i=0;
             while($row = $grava->fetch(PDO::FETCH_ASSOC)) {
                 $i++;
-                echo "Rank número ".$i." é ".$row['username_dados']." com ".$row['pontos']. " pontos, no level " .$row['level']. " feito em apenas ".$row['tempo']. " segundos!<br>";
+                echo "RANK ".$i.": ".$row['username_dados']." com ".$row['pontos']. " pontos, level " .$row['level']. " completado em ".$row['tempo']. " segundos!<br>";
             }
-            
+            echo "<hr>";
+                $sql = "SELECT count(*)  AS rank 
+                FROM pontuacao p CROSS JOIN
+                (SELECT pontos FROM pontuacao WHERE username_dados = '".$_SESSION['username']."') s
+                WHERE p.pontos > s.pontos or
+                (p.pontos = s.pontos and p.username_dados <= '".$_SESSION['username']."');";
+            $rank = $conn->prepare($sql);
+            $rank->execute(array());
+            $row = $rank->fetch(PDO::FETCH_ASSOC);
+            echo "Sua posição no ranking é ". $row['rank'];            
     }catch(PDOException $e){
     echo "Ocorreu um erro: " . $e->getMessage();
   } 
@@ -33,9 +42,6 @@
 
 <body>
     <header>
-        <div id="logo">
-            <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
-        </div>
     </header>
     <section>
         
