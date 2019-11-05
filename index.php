@@ -5,26 +5,14 @@
     <meta charset="UTF-8" />
     <title> TRABALHO 3 - PHP </title>
  <link rel="stylesheet" type="text/css" href="style.css" />
-
- 
-
 </head>
 
 <body>
-
-
-    
-
     <header>
         <div id="logo">
             <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
         </div>
     </header>
-
-
-  
-    
-    
     <section>
         
         <button id="button" onclick="pauseGame()">Pause game</button>
@@ -98,9 +86,7 @@
         </div>
       
     </section>
-    <script src="Tetris.js"></script>
-    
-    
+    <script src="Tetris.js"></script>    
     
 </body>
 </html>
