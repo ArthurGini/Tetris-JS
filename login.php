@@ -4,21 +4,31 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8" />
-  <title> Trabalho 3 - PHP </title>
-  <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <title> Trabalho 3 - PHP </title>
+<link href="style.css" rel="stylesheet">
+
 </head>
+
 <body>
-<div class = "login">
+ 
+
+
   <header>
-       <h1> Login do Jogador </h1>
+  <div id="logo">
+     <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
+            <h1> Login do Jogador </h1>
+        </div>
+    
   </header>
-  
-<?php
+ 
+  <div class="Login">
+
+  <?php
 $form = "
   <form action = 'login.php' method='POST'> 
-    <p> Username: <input type = 'text' name = 'username'   /> </p>
-    <p> Senha: <input type = 'password' name = 'senha'  /> </p>
+    <p> Username: <input type = 'text' name = 'username' required = 'required'  /> </p>
+    <p> Senha: <input type = 'password' name = 'senha' required = 'required' /> </p>
     <input type='submit' value='Login' name='submit'/>
   </form>";
 
@@ -49,9 +59,14 @@ else{
 }
 ?>
 
-<a href="cadastro.php">Criar nova conta</a> <br>
+
+<form action="cadastro.php">
+    <input type="submit" value="Não possuo conta" />
+</form>
 
 
 </div>
+
 </body>
+
 </html>
