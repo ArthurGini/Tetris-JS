@@ -291,7 +291,6 @@ ul {
      position: absolute;
      margin-left: 110px;
      margin-top: 240px;
-
 }
    
 #ranking-button:hover {
@@ -341,15 +340,5 @@ ul {
      text-align: center;
      box-shadow: 15px 15px 10px #458B74;
      overflow-y: auto;
-}
-   
-#ranking-button:hover {
-     background-color: #4A708B;
-}
-   
-#ranking-button:active {
-     background-color: #4A708B;
-     box-shadow: 0 5px #999;
-     transform: translateY(4px);
-}
 
+}
