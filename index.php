@@ -1,48 +1,52 @@
 <?php
     session_start();
-    if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
+   if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
         header("Location: login.php");
     }
 
-    if(isset($_GET["nome"]))
-    {
-        try{
-            $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $conn->exec("set names utf8");
-            $sql = "INSERT INTO pontuacao VALUES (
-                          '" . $_GET['pontos'] . "',
-                          " . $_GET['level'] . ", 
-                          '" .$_GET['tempo'] . "', 
-                          '" .$_GET['nome'] . "')";
-            $grava = $conn->prepare($sql);
-            $grava->execute(array());
-        }catch(PDOException $e){
-            echo('Erro: ' . $e->getMessage());
-        }
-    }
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8" />
     <title> TRABALHO 3 - PHP </title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+ <link rel="stylesheet" type="text/css" href="style.css" />
+
+ 
+
 </head>
 
 <body>
+
+
+    
+
     <header>
         <div id="logo">
             <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
         </div>
     </header>
+
+
+  
+    
+    
     <section>
+        
         <button id="button" onclick="pauseGame()">Pause game</button>
         <button id="button2" onclick="startGame()">Restart game</button>
         <button id="button3" onclick="instructWindow()">Instructions</button>
-        <a href="ranking.php"><button id="ranking-button">Ranking</button></a>
+        <button id="button5" onclick="document.location.href='historico.php'">Histórico de partidas</button>
+        <button id="button6" onclick="document.location.href='ranking.php'">Ranking global</button>
+        <button id="button7" onclick="document.location.href='alterar.php'">Alterar dados</button>
+        <button id="button8" onclick="document.location.href='deslogar.php'">Deslogar</button> 
         <canvas id="Matriz"></canvas>
+
+       
+        </div>
+
         <div id="next">
             <div class="title">
                 <h3>Next Piece</h3>
@@ -106,14 +110,15 @@
                 <img src="img/p-key.png" alt="P key">
                 <p>Pause/unpause game</p>
             </div>
-            <button id="button4" onclick="instructWindow()">Ok</button>
-        </div>
-    </section>
+            <button id="button4" onclick="instructWindow()">Ok</button> 
 
-    <script>
-        var name = "<?php echo $_SESSION['username']; ?>";
-    </script>
+        </div>
+      
+    </section>
     <script src="Tetris.js"></script>
+    
+    
+    
 </body>
 </html>
 

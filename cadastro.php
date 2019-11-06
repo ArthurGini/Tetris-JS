@@ -6,25 +6,33 @@
 <head>
     <meta charset="UTF-8" />
     <title> Trabalho 3 - PHP </title>
-    <link href="style.css" rel="stylesheet">
+     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-<div class = "cadastro">
+
+
+
 
   <header>
-       <h1> Cadastro do Jogador </h1>
+  <div id="logo">
+   <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
+   <h1> Cadastro do Jogador </h1>
+      </div>
+  
   </header>
 
-<?php
+  <div class = "Cadastro">
+  <?php
 $form = "
 <form action = 'cadastro.php'  method='POST'> 
-  <p> Nome Completo: <input type = 'text' name = 'nome' /> </p>
-  <p> Data de Nascimento: <input type = 'text' name = 'datanasc'   /> </p>
-  <p> CPF: <input type = 'text' name = 'cpf'/> </p>
-  <p> Telefone: <input type = 'text' name = 'tel' /> </p>
-  <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
-  <p> Username Novo: <input type ='text' name = 'username' /> </p> 
-  <p> Senha Nova: <input type ='password' name = 'senha' /> </p>
+  <p> Nome Completo: <input type = 'text' name = 'nome' required = 'required' /> </p>
+  <p> Data de Nascimento: <input type = 'text' name = 'datanasc' required = 'required'  /> </p>
+  <p> CPF: <input type = 'text' name = 'cpf' required = 'required'/> </p>
+  <p> Telefone: <input type = 'text' name = 'tel' required = 'required' /> </p>
+  <p> E-mail: <input type ='text' name = 'e-mail' required = 'required'  /> </p>
+  <p> Username Novo: <input type ='text' name = 'username' required = 'required' /> </p> 
+  <p> Senha Nova: <input type ='password' name = 'senha' required = 'required' /> </p>
   <input type='submit' value='Cadastrar' name='submit'/>
 </form>";
 
@@ -42,7 +50,7 @@ if(isset($_POST["nome"])){
                           '" . $_POST['senha'] . "')";
     $conn->exec($sql);
     echo $form;
-    header("Location: index.php");
+    header("Location: cadastro.php");
   }
   catch(PDOException $e){
     echo "Ocorreu um erro: " . $e->getMessage();
@@ -53,7 +61,12 @@ else{
 }
 
 ?>
+<form action="login.php">
+    <input type="submit" value="Voltar para o Login" />
+</form>
 
 </div>
+    
 </body>
+
 </html>

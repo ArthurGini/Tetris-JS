@@ -150,7 +150,7 @@ ul {
      box-shadow: 0 9px #999;
      margin-top: 20px;
      position: absolute;
-     margin-left: 8%;
+     margin-left: 3%;
 }
    
 #button:hover {
@@ -175,7 +175,7 @@ ul {
      box-shadow: 0 9px #999;
      margin-top: 90px;
      position: absolute;
-     margin-left: 8%;
+      margin-left: 3%;
 }
    
 #button2:hover {
@@ -201,7 +201,7 @@ ul {
      box-shadow: 0 9px #999;
      margin-top: 160px;
      position: absolute;
-     margin-left: 8%;
+      margin-left: 3%;
 }
    
 #button3:hover {
@@ -224,7 +224,6 @@ ul {
      border: none;
      border-radius: 15px;
      box-shadow: 0 9px #999;
-     position: absolute;
      margin-left: 160px;
      margin-top: 40px;
 }
@@ -234,6 +233,102 @@ ul {
 }
    
 #button4:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+#button5 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 230px;
+     position: absolute;
+     margin-left: 3%;
+}
+   
+#button5:hover {
+     background-color: #4A708B;
+}
+   
+#button5:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+#button6 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 300px;
+     position: absolute;
+     margin-left: 3%;
+}
+   
+#button6:hover {
+     background-color: #4A708B;
+}
+   
+#button6:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+#button7 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 370px;
+     position: absolute;
+     margin-left: 3%;
+}
+   
+#button7:hover {
+     background-color: #4A708B;
+}
+   
+#button7:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+#button8 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 440px;
+     position: absolute;
+      margin-left: 3%;
+}
+   
+#button8:hover {
+     background-color: #4A708B;
+}
+   
+#button8:active {
      background-color: #4A708B;
      box-shadow: 0 5px #999;
      transform: translateY(4px);
@@ -277,30 +372,37 @@ ul {
      margin-top: -1px;
 }
 
-#ranking-button {
-     padding: 15px 25px;
-     font-size: 15px;
+.Login{
+     margin-top: 100px;
+     margin-left: 38%;
+     height: 250px;
+     width: 500px;
      text-align: center;
-     cursor: pointer;
-     outline: none;
-     color: #fff;
-     background-color: #458B74;
-     border: none;
-     border-radius: 15px;
-     box-shadow: 0 9px #999;
-     position: absolute;
-     margin-left: 110px;
-     margin-top: 240px;
+     font-family: cursive;
+     border-radius: 5%;
+     background: #0c9a8d;
+     border-style: solid;
+     border-color: black;
+     box-shadow: 10px 10px 10px #999;
 }
-   
-#ranking-button:hover {
-     background-color: #4A708B;
+.Login > h1{
+     text-align: center;
+     font-family: cursive;
+     margin-bottom: 25px; 
 }
-   
-#ranking-button:active {
-     background-color: #4A708B;
-     box-shadow: 0 5px #999;
-     transform: translateY(4px);
+
+.Cadastro{
+     margin-top: 80px;
+     margin-left: 38%;
+     height: 420px;
+     width: 500px;
+     text-align: center;
+     font-family: cursive;
+     border-radius: 5%;
+     background: #0c9a8d;
+     border-style: solid;
+     border-color: black;
+     box-shadow: 10px 10px 10px #999;
 }
 /*Hitorico de partidas */
 #button5 {
@@ -340,5 +442,10 @@ ul {
      text-align: center;
      box-shadow: 15px 15px 10px #458B74;
      overflow-y: auto;
+}
 
+.extras {
+     margin-right: 28%;
+     text-align: center;
+     font-family: cursive;
 }

@@ -1,9 +1,7 @@
-var NCOL;
-var NLIN;
-if(NCOL != 1 && NLIN != 1){
-    var NCOL= prompt ("Digite a largura do tabuleiro");//Quantidade de colunas da matriL base
-    var NROW= prompt ("Digite a altura do tabuleiro");//Quantidade de linhas da matriL base
-}
+
+
+var NCOL= prompt ("Digite a largura do tabuleiro");//Quantidade de colunas da matriL base
+var NROW= prompt ("Digite a altura do tabuleiro");//Quantidade de linhas da matriL base
 
 var players = [];//Criando diversos jogadores com o construtor Pessoa
 
@@ -548,6 +546,7 @@ function eliminatedRows(){
     continueMusic.play();
 }
 /*Funcao para o ranking */
+var name;
 var time;
 var cont=0;
 
@@ -563,6 +562,7 @@ class Pessoa {
 
 //Funções para setar o valor dos atributos
 function setName(){
+    name =  prompt("Game Over !!! \nRegister to Rank: ");
     return name;
 }
 
@@ -578,21 +578,33 @@ function printData(){
     players.forEach(item => {
     document.getElementById("dados").innerHTML +=
     '<li><b>Name: </b>'+item.name +
-    '<b> Points: </b>'+item.points+
-    '<br><b> Level: </b>'+item.level +
+    '<b> points: </b>'+item.points+
+    '<br><b> level: </b>'+item.level +
     '<b> Time: </b>'+item.time+
-    '</li>';
-    send(item.name, item.points, item.level, item.time);
+    '</li>';//Adicionar ponto aqu
 });
     return false;
-}
+} 
 
-var send = function(name, points, level, time) {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-};
+function printData(){
+    continueMusic.pause();
+    gameOver.play();
+    continueMusic.currentTime = 0;
+    players.push (new Pessoa());//Adicionando Pessoas ao array Jogadores
+    //Funcao para ordenar o Vetor de jogadores a partir da maior pontução
+    players.sort((a, b) => (a.points < b.points) ? 1 : -1)
+    document.getElementById("dados").innerHTML = ""; //Limpa o campo dados antes de imprimir a lista 
+    //Item Percorre a quantidade de jogadores imprimindo no html
+    players.forEach(item => {
+    document.getElementById("dados").innerHTML +=
+    '<li><b>Name: </b>'+item.name +
+    '<b> points: </b>'+item.points+
+    '<br><b> level: </b>'+item.level +
+    '<b> Time: </b>'+item.time+
+    '</li>';//Adicionar ponto aqu
+});
+    return false;
+} 
 
 function pauseGame(){
     if(paused == 1){
@@ -631,4 +643,6 @@ function instructWindow(){
         }
     }
 }
+
+
 
