@@ -589,7 +589,7 @@ function printData(){
 
 var send = function(name, points, level, time) {
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://8080:localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
+    var url = "http://localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 };
