@@ -31,7 +31,7 @@
                 try{
                         $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
                         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                        $sql = "SELECT * FROM pontuacao ORDER BY pontos";
+                        $sql = "SELECT * FROM pontuacao WHERE username_dados = '".$_SESSION['username']."'";
                         $grava = $conn->prepare($sql);
                         $grava->execute(array());
                         $i=0;

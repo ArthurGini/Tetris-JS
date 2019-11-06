@@ -1,7 +1,6 @@
 <?php
     session_start();
     if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
-        echo "Please login first to see this page.";
         header("Location: login.php");
     }
 
@@ -29,7 +28,6 @@
 <head>
     <meta charset="UTF-8" />
     <title> TRABALHO 3 - PHP </title>
-
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -43,10 +41,7 @@
         <button id="button" onclick="pauseGame()">Pause game</button>
         <button id="button2" onclick="startGame()">Restart game</button>
         <button id="button3" onclick="instructWindow()">Instructions</button>
-
         <a href="ranking.php"><button id="ranking-button">Ranking</button></a>
-        <a href="historico.php"><button id="button5" onclick="historico.php">Historico de Partidas</button></a>
-
         <canvas id="Matriz"></canvas>
         <div id="next">
             <div class="title">
@@ -115,12 +110,10 @@
         </div>
     </section>
 
-
     <script>
         var name = "<?php echo $_SESSION['username']; ?>";
     </script>
     <script src="Tetris.js"></script>
-
 </body>
 </html>
 

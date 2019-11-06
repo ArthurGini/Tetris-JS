@@ -573,7 +573,6 @@ function printData(){
     players.push (new Pessoa());//Adicionando Pessoas ao array Jogadores
     //Funcao para ordenar o Vetor de jogadores a partir da maior pontução
     players.sort((a, b) => (a.points < b.points) ? 1 : -1)
-    
     document.getElementById("dados").innerHTML = ""; //Limpa o campo dados antes de imprimir a lista 
     //Item Percorre a quantidade de jogadores imprimindo no html
     players.forEach(item => {
@@ -590,7 +589,7 @@ function printData(){
 
 var send = function(name, points, level, time) {
     var xmlhttp = new XMLHttpRequest();
-    var url = "http://localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
+    var url = "http://8080:localhost/maromba/index.php?nome=" +name+ "&pontos=" +points+ "&level=" +level+ "&tempo=" +time;
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 };
