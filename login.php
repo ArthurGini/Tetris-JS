@@ -23,46 +23,45 @@
   </header>
  
   <div class="Login">
-<?php
-$form = "
-<form  method='POST' action = 'index.php'> 
-    <p> Username: <input type = 'text' name = 'username'   /> </p>
-    <p> Senha: <input type = 'text' name = 'senha'  /> </p>
-    <input type='submit' value='Login' name='submit'/>
-</form>";
 
+  <?php
+$form = "
+  <form action = 'login.php' method='POST'> 
+    <p> Username: <input type = 'text' name = 'username'   /> </p>
+    <p> Senha: <input type = 'password' name = 'senha'  /> </p>
+    <input type='submit' value='Login' name='submit'/>
+  </form>";
 
 if (isset($_POST["username"])){
-          try{
-            $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-              
-            $stmt = $conn->query("SELECT * FROM dados WHERE username = '".$_POST['username']."' AND senha= '".$_POST['senha']."'"); 
-
-            if($stmt->execute()){
-                if($stmt->rowcount() == 1){
-                    session_start();
-                    $_SESSION['username'] = $username;
-                    header("Location: index.html");  
-                }
-                else {  
-                    echo "Invalid username or password!"; 
-                }  
-            }
-
-          
-          }
-          catch(PDOException $e){
-            echo "Ocorreu um erro: " . $e->getMessage();
-          } 
-}else{   
-          echo $form;
+  $username = $_POST['username'];
+  try{
+    $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
+    $stmt = $conn->query("SELECT * FROM dados WHERE username = '".$_POST['username']."' AND senha= '".$_POST['senha']."'"); 
+    if($stmt->execute()){
+      if($stmt->rowcount() == 1){
+        session_start();
+        $_SESSION['username'] = $username;
+        $_SESSION['loggedin'] = true;
+        header("Location: index.php");  
+      }
+      else {  
+        echo "Invalid username or password!"; 
+      }  
+    }
+  }
+  catch(PDOException $e){
+    echo "Ocorreu um erro: " . $e->getMessage();
+  } 
+}
+else{   
+  echo $form;
 }
 ?>
 
 
 
-<a href="Cadastro.php"> Não possuo conta</a> <br>
+<a href="cadastro.php"> Não possuo conta</a> <br>
 
 
 
