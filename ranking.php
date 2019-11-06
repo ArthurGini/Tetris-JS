@@ -8,7 +8,7 @@
     try{
             $conn = new PDO("mysql:host=localhost;dbname=bancophp", "root", "");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "SELECT * FROM pontuacao ORDER BY pontos DESC limit 10";
+            $sql = "SELECT * FROM pontuacao ORDER BY pontos DESC, tempo ASC, username_dados ASC limit 10";
             $grava = $conn->prepare($sql);
             $grava->execute(array());
             $i=0;
@@ -17,17 +17,16 @@
                 echo "RANK ".$i.": ".$row['username_dados']." com ".$row['pontos']. " pontos, level " .$row['level']. " completado em ".$row['tempo']. " segundos!<br>";
             }
             echo "<hr>";
-                $sql = "SELECT ROW_NUMBER() OVER(ORDER BY pontos DESC, tempo ASC) as linha, username_dados
+                $sql = "SELECT ROW_NUMBER() OVER(ORDER BY pontos DESC, tempo ASC, username_dados ASC) as linha, username_dados
                         FROM pontuacao";
                 $grava = $conn->prepare($sql);
                 $grava->execute(array());
-                $position = 1;
                 while($row = $grava->fetch(PDO::FETCH_ASSOC)){
                     if($row['username_dados'] == $_SESSION['username']){
-                        echo "A sua melhor classificação é ".$position."° lugar!";
+                        echo "A sua melhor classificação é ".$row['linha']."° lugar!";
                         break;
                     }
-                    $position++;
+
                 }
     }catch(PDOException $e){
     echo "Ocorreu um erro: " . $e->getMessage();
