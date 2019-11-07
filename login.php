@@ -27,8 +27,8 @@
   <?php
 $form = "
   <form action = 'login.php' method='POST'> 
-    <p> Username: <input type = 'text' name = 'username'   /> </p>
-    <p> Senha: <input type = 'password' name = 'senha'  /> </p>
+    <p> Username: <input type = 'text' name = 'username' required='required'   /> </p>
+    <p> Senha: <input type = 'password' name = 'senha' required='required'  /> </p>
     <input id='buttonlogin' type='submit' value='Login' name='submit'/>
   </form>";
 

@@ -35,13 +35,13 @@ $form = "
 <form action = 'alterar.php'  method='POST'> 
 
 
-      <p> Nome Completo: <input type = 'text' name = 'nome' /> </p>
+      <p> Nome Completo: <input type = 'text' name = 'nome' required='required' /> </p>
 
-      <p> Telefone: <input type = 'text' name = 'tel' /> </p>
+      <p> Telefone: <input type = 'text' name = 'tel' required='required' /> </p>
 
-      <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
+      <p> E-mail: <input type ='text' name = 'e-mail'  required='required' /> </p>
       
-      <p> Senha Nova: <input type ='text' name = 'senha' /> </p>
+      <p> Senha Nova: <input type ='text' name = 'senha' required='required' /> </p>
             <input id='buttonalterar' type='submit' value='Alterar' name='submit'/>
     </form>";
 
