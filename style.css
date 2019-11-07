@@ -621,4 +621,18 @@ ul {
      background-color: #4A708B;
      box-shadow: 0 5px #999;
      transform: translateY(4px);
+}    
+/*Historico de partidas */
+#historico{
+     transform: translate(-50%, -50%);
+     top: 50%;
+     left: 50%;
+     height:auto;
+     width: 500px;
+     background: #eeeeee;
+     position: absolute;
+     text-align: center;
+     box-shadow: 15px 15px 10px #458B74;
+     overflow-y: auto;
+
 }
