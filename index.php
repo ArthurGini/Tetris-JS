@@ -26,19 +26,11 @@
     </header>
     
     <section>        
-        <button id="button" onclick="pauseGame()">Pause game</button>
-        <button id="button2" onclick="startGame()">Restart game</button>
-        <button id="button3" onclick="instructWindow()">Instructions</button>
-        <canvas id="Matriz"></canvas>
-
-       
         <div class = "menu">
-
-
-        <?php
-        include "menu.php";
-        ?>
+        <?php include "menu.php"; ?>
         </div>
+
+        <canvas id="Matriz"></canvas>
 
         <div id="next">
             <div class="title">
