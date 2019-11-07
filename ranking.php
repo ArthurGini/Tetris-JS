@@ -15,8 +15,9 @@
     </header>
 
     <section>
-    <a href="index.php"><button id="button" onclick="historico.php">Voltar ao Jogo</button></a>
-
+    <?php
+    include 'menu2.php';
+    ?>
         <div id="historico">
             <div class="title">
                 <h3>Ranking de Partidas</h3><hr>

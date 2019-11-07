@@ -15,6 +15,9 @@
     </header>
 
     <section>
+    <?php
+    include 'menu2.php';
+    ?>
     <a href="index.php"><button id="button" onclick="historico.php">Voltar ao Jogo</button></a>
 
         <div id="historico">
