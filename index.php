@@ -35,7 +35,6 @@
         <button id="button7" onclick="document.location.href='alterar.php'">Alterar dados</button>
         <button id="button8" onclick="document.location.href='deslogar.php'">Deslogar</button> 
 
-        <?php include "menu.php"; ?>
         </div>
 
         <canvas id="Matriz"></canvas>
