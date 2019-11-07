@@ -19,22 +19,13 @@
 </head>
 
 <body>
-
-
-    
-
     <header>
         <div id="logo">
             <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
         </div>
     </header>
-
-
-  
     
-    
-    <section>
-        
+    <section>        
         <button id="button" onclick="pauseGame()">Pause game</button>
         <button id="button2" onclick="startGame()">Restart game</button>
         <button id="button3" onclick="instructWindow()">Instructions</button>
@@ -42,9 +33,7 @@
         <button id="button6" onclick="document.location.href='ranking.php'">Ranking global</button>
         <button id="button7" onclick="document.location.href='alterar.php'">Alterar dados</button>
         <button id="button8" onclick="document.location.href='deslogar.php'">Deslogar</button> 
-        <canvas id="Matriz"></canvas>
-
-       
+        <canvas id="Matriz"></canvas>   
         </div>
 
         <div id="next">
