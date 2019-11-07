@@ -162,6 +162,7 @@ ul {
      box-shadow: 0 5px #999;
      transform: translateY(4px);
 }
+
 #button2 {
      padding: 15px 25px;
      font-size: 15px;
@@ -314,4 +315,213 @@ ul {
      text-align: center;
      font-family: cursive;
    
+}
+
+.alterarCadastro{
+     margin-top: 80px;
+     margin-left: 38%;
+     height: 420px;
+     width: 500px;
+     text-align: center;
+     font-family: cursive;
+     border-radius: 5%;
+     background: #0c9a8d;
+     border-style: solid;
+     border-color: black;
+     box-shadow: 10px 10px 10px #999;
+}
+
+/*  Botão alterar */
+
+#buttonalterar {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: -10%;
+}
+   
+#buttonalterar:hover {
+     background-color: #4A708B;
+}
+   
+#buttonalterar:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+
+/*butin viktark;*/
+
+#buttonvoltar {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: 5%;
+}
+   
+#buttonvoltar:hover {
+     background-color: #4A708B;
+}
+   
+#buttonvoltar:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+
+/*button cadastrar*/
+
+#buttoncadastrar {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: 2.5%;
+}
+   
+#buttoncadastrar:hover {
+     background-color: #4A708B;
+}
+   
+#buttoncadastrar:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+
+
+
+/* button fazerlogin*/
+#buttonfazerlogin {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: -10%;
+}
+   
+#buttonfazerlogin:hover {
+     background-color: #4A708B;
+}
+   
+#buttonfazerlogin:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+
+
+/* buttonlogin*/
+#buttonlogin {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: 5%;
+}
+   
+#buttonlogin:hover {
+     background-color: #4A708B;
+}
+   
+#buttonlogin:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+
+
+ /*buttonSemConta*/
+#buttonSemConta {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: 2.5%;
+}
+   
+#buttonSemConta:hover {
+     background-color: #4A708B;
+}
+   
+#buttonSemConta:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
+}
+ /*buttonSemConta*/
+ #buttonSemConta2 {
+     padding: 15px 25px;
+     font-size: 15px;
+     text-align: center;
+     cursor: pointer;
+     outline: none;
+     color: #fff;
+     background-color: #458B74;
+     border: none;
+     border-radius: 15px;
+     box-shadow: 0 9px #999;
+     margin-top: 20px;
+     position: absolute;
+     margin-left: -15%;
+}
+   
+#buttonSemConta2:hover {
+     background-color: #4A708B;
+}
+   
+#buttonSemConta2:active {
+     background-color: #4A708B;
+     box-shadow: 0 5px #999;
+     transform: translateY(4px);
 }

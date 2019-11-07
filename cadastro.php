@@ -33,7 +33,7 @@ $form = "
   <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
   <p> Username Novo: <input type ='text' name = 'username' /> </p> 
   <p> Senha Nova: <input type ='password' name = 'senha' /> </p>
-  <input type='submit' value='Cadastrar' name='submit'/>
+  <input id='buttoncadastrar' type='submit' value='Cadastrar' name='submit'/>
 </form>";
 
 if(isset($_POST["nome"])){
@@ -61,7 +61,8 @@ else{
 }
 
 ?>
-<a href="login.php"> Fazer login</a> <br>
+<a id= "buttonfazerlogin" href="login.php"> Fazer login</a> <br>
+
 
 </div>
     
