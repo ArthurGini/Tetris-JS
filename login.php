@@ -27,9 +27,9 @@
   <?php
 $form = "
   <form action = 'login.php' method='POST'> 
-    <p> Username: <input type = 'text' name = 'username' required = 'required'  /> </p>
-    <p> Senha: <input type = 'password' name = 'senha' required = 'required' /> </p>
-    <input type='submit' value='Login' name='submit'/>
+    <p> Username: <input type = 'text' name = 'username'   /> </p>
+    <p> Senha: <input type = 'password' name = 'senha'  /> </p>
+    <input id='buttonlogin' type='submit' value='Login' name='submit'/>
   </form>";
 
 if (isset($_POST["username"])){
@@ -60,9 +60,9 @@ else{
 ?>
 
 
-<form action="cadastro.php">
-    <input type="submit" value="Não possuo conta" />
-</form>
+
+<a id="buttonSemConta2" href="cadastro.php"> Não possuo conta</a> <br>
+
 
 
 </div>

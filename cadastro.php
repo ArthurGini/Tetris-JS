@@ -26,14 +26,14 @@
   <?php
 $form = "
 <form action = 'cadastro.php'  method='POST'> 
-  <p> Nome Completo: <input type = 'text' name = 'nome' required = 'required' /> </p>
-  <p> Data de Nascimento: <input type = 'text' name = 'datanasc' required = 'required'  /> </p>
-  <p> CPF: <input type = 'text' name = 'cpf' required = 'required'/> </p>
-  <p> Telefone: <input type = 'text' name = 'tel' required = 'required' /> </p>
-  <p> E-mail: <input type ='text' name = 'e-mail' required = 'required'  /> </p>
-  <p> Username Novo: <input type ='text' name = 'username' required = 'required' /> </p> 
-  <p> Senha Nova: <input type ='password' name = 'senha' required = 'required' /> </p>
-  <input type='submit' value='Cadastrar' name='submit'/>
+  <p> Nome Completo: <input type = 'text' name = 'nome' /> </p>
+  <p> Data de Nascimento: <input type = 'text' name = 'datanasc'   /> </p>
+  <p> CPF: <input type = 'text' name = 'cpf'/> </p>
+  <p> Telefone: <input type = 'text' name = 'tel' /> </p>
+  <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
+  <p> Username Novo: <input type ='text' name = 'username' /> </p> 
+  <p> Senha Nova: <input type ='password' name = 'senha' /> </p>
+  <input id='buttoncadastrar' type='submit' value='Cadastrar' name='submit'/>
 </form>";
 
 if(isset($_POST["nome"])){
@@ -61,9 +61,8 @@ else{
 }
 
 ?>
-<form action="login.php">
-    <input type="submit" value="Voltar para o Login" />
-</form>
+<a id= "buttonfazerlogin" href="login.php"> Fazer login</a> <br>
+
 
 </div>
     

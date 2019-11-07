@@ -19,13 +19,17 @@
 <body>
 
 
-<div class = "alterarCadastro">
 
-  <header>
-       <!--<h1> Alterar cadastro do Jogador </h1> -->
+
+<header>
+  <div id="logo">
+     <img id="tetris-logo" src="img/project-logo.png" alt="logotipo">
+      
+        </div>
+    
   </header>
 
-
+  <div class = "alterarCadastro">
 <?php
 $form = "
 <form action = 'alterar.php'  method='POST'> 
@@ -38,7 +42,7 @@ $form = "
       <p> E-mail: <input type ='text' name = 'e-mail'  /> </p>
       
       <p> Senha Nova: <input type ='text' name = 'senha' /> </p>
-            <input type='submit' value='Alterar' name='submit'/>
+            <input id='buttonalterar' type='submit' value='Alterar' name='submit'/>
     </form>";
 
 if (isset($_POST['nome'])){
@@ -64,6 +68,8 @@ else{
   echo $form;
 }
 ?>
+
+<input id= "buttonvoltar" type='button' value='Voltar' name='voltar' onclick='history.go(-2)'/>
 
 
 </div>
