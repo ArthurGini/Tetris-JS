@@ -69,7 +69,7 @@ else{
 }
 ?>
 
-<input id= "buttonvoltar" type='button' value='Voltar' name='voltar' onclick='history.go(-2)'/>
+<input id= "buttonvoltar" type='button' value='Voltar' name='voltar' onclick="document.location.href='index.php'"/>
 
 
 </div>
