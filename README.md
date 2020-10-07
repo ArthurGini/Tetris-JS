@@ -1,4 +1,4 @@
-# Tetris - JavaScript #
+# Tetris - JavaScript - PHP #
 
 ### Trabalho realizado:
 - Faculdade de Tecnologia - UNICAMP
